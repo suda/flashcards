@@ -21,10 +21,16 @@ class App extends Component {
     currentCards
         .push({
           id: 1,
-          eng: 'foo',
-          han: 'bar',
-          pin: 'baz',
-        });
+          eng: 'amo',
+          han: 'yo',
+          pin: 'amor',
+        })
+        .push({
+          id: 1,
+          eng: 'amas',
+          han: 'tu',
+          pin: 'amor',
+        })
 
     this.setState({
       cards: currentCards,
