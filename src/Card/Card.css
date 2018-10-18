@@ -40,14 +40,15 @@
 }
 
 .text{
+  font-family: SansForgetica, sans-serif;
   color: #333;
-  font-size: 2.3em;
+  font-size: 6.3em;
   padding-top: 40%;
 }
 
 .title{
   color: #333;
-  font-size: 6.3em;
+  font-size: 3.3em;
   padding-top: 20%;
 }
 

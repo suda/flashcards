@@ -3,3 +3,8 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+@font-face {
+  font-family: SansForgetica;
+  src: url("assets/fonts/SansForgetica-Regular.otf") format("opentype");
+}
