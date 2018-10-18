@@ -39,19 +39,19 @@
   transform: rotateY(180deg);
 }
 
-.eng{
+.text{
   color: #333;
   font-size: 2.3em;
   padding-top: 40%;
 }
 
-.han{
+.title{
   color: #333;
   font-size: 6.3em;
   padding-top: 20%;
 }
 
-.pin{
+.subtitle{
     color: rgba(200, 10, 10, 1);
     font-size: 2.3em;
     padding-top: 10%;

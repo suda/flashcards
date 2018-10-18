@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Card from './Card/Card';
 import DrawButton from './DrawButton/DrawButton';
+import cards from './Data/cards'
 
 class App extends Component {
   constructor(props){
@@ -9,28 +10,11 @@ class App extends Component {
 
     this.updateCard = this.updateCard.bind(this);
 
-    this.state = {
-      cards: [],
-      currentCard: {} 
-    }
+    this.state = { cards: cards, currentCard: {} }
   }
 
   componentWillMount(){
     const currentCards = this.state.cards;
-
-    currentCards
-        .push({
-          id: 1,
-          eng: 'amo',
-          han: 'yo',
-          pin: 'amor',
-        })
-        .push({
-          id: 1,
-          eng: 'amas',
-          han: 'tu',
-          pin: 'amor',
-        })
 
     this.setState({
       cards: currentCards,
@@ -60,10 +44,7 @@ class App extends Component {
     return (
       <div className="App">
         <div className="cardRow">
-          <Card eng={this.state.currentCard.eng}
-            han={this.state.currentCard.han}
-            pin={this.state.currentCard.pin}
-          />
+          <Card data={this.state.currentCard} />
         </div>
         <div className="buttonRow">
           <DrawButton drawCard={this.updateCard}/>
