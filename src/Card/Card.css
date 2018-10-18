@@ -30,6 +30,10 @@
   overflow: hidden;
   text-align: center;
   background-color: rgba(255, 251, 251, 1);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .card .back {
@@ -37,23 +41,31 @@
   width: 400px;
   text-align: center;
   transform: rotateY(180deg);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.text{
+.content {
+  padding: 0 10px;
+}
+
+.text {
   font-family: SansForgetica, sans-serif;
   color: #333;
-  font-size: 6.3em;
-  padding-top: 40%;
+  font-size: 6.3vw;
 }
 
-.title{
+.title {
   color: #333;
-  font-size: 3.3em;
-  padding-top: 20%;
+  font-size: 5em;
+  width: 100%;
 }
 
 .subtitle{
-    color: rgba(200, 10, 10, 1);
-    font-size: 2.3em;
-    padding-top: 10%;
+  color: rgba(200, 10, 10, 1);
+  font-size: 2.3em;
+  padding-top: 10%;
+  width: 100%;
 }
