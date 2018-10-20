@@ -16,7 +16,7 @@ class DrawButton extends Component{
         return (
             <div className="buttonContainer">
                 <button className="btn" onClick={this.drawCard}>
-                    <img src="/assets/images/sync.svg" />
+                    <img src="/assets/images/sync.svg" alt="Draw card" />
                 </button>
             </div>
         )

@@ -15,7 +15,11 @@ class App extends Component {
 
     let cards = [];
     const pronouns = [
-      'yo', 'tú', 'él\nella\nusted', 'nosotros\nnosotras', 'vosotros\nvosotras',
+      'yo', 
+      'tú', 
+      'él\nella\nusted', 
+      'nosotros\nnosotras', 
+      'vosotros\nvosotras',
       'ellos\nellas\nustedes'
     ];
 
@@ -51,30 +55,38 @@ class App extends Component {
 
   updateCard() {
     const currentCards = this.state.cards;
-    this.setState(
-        {cards: currentCards, currentCard: this.getRandomCard(currentCards)})
+    
+    if (this.state.revealed) {
+      this.toggleReveal()
+    }
+
+    setTimeout(this.setState.bind(this, {
+      cards: currentCards,
+      currentCard: this.getRandomCard(currentCards)
+    }), 200)
   }
 
   toggleReveal() {
-    console
-        .log(this)
-        // eslint-disable-next-line
-        this.state.currentCard.revealed = !this.state.currentCard.revealed;
-    this.setState(
-        {cards: this.state.cards, currentCard: this.state.currentCard})
+    let revealed = this.state.revealed
+    revealed = !revealed;
+    this.setState({
+      cards: this.state.cards,
+      currentCard: this.state.currentCard,
+      revealed
+    })
   }
 
   render() {
     return (
-        <div className='App'><div className='cardRow'>
-        <Card data={this.state.currentCard} toggleReveal={
-      this.toggleReveal} />
+      <div className='App'>
+        <div className='cardRow'>
+          <Card data={this.state.currentCard} toggleReveal={this.toggleReveal} revealed={this.state.revealed} />
         </div>
         <div className='buttonRow'>
-          <DrawButton drawCard={
-      this.updateCard}/>
+          <DrawButton drawCard={this.updateCard} />
         </div>
-      </div>);
+      </div>
+    );
   }
 }
 
