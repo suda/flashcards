@@ -19,6 +19,6 @@ body {
 
 @media (max-width: 420px) {
   #root {
-    align-items: flex-end;
+    height: 100%;
   }
 }

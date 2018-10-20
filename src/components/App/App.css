@@ -6,3 +6,10 @@
 .btnRow{
     padding: 5px;
 }
+
+@media (max-width: 420px) {
+  .App {
+    bottom: 20px;
+    position: absolute;
+  }
+}
