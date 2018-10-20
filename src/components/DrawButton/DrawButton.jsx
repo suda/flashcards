@@ -12,10 +12,12 @@ class DrawButton extends Component{
         this.props.drawCard();
     }
 
-    render(props){
-        return(
+    render(props) {
+        return (
             <div className="buttonContainer">
-                <button className="btn" onClick={this.drawCard}>Draw Card</button>
+                <button className="btn" onClick={this.drawCard}>
+                    <img src="/assets/images/sync.svg" />
+                </button>
             </div>
         )
     }

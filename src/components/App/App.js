@@ -2,15 +2,16 @@ import './App.css';
 
 import React, {Component} from 'react';
 
-import Card from './Card/Card';
-import data from './Data/cards'
-import DrawButton from './DrawButton/DrawButton';
+import data from '../../data/spanish'
+import Card from '../Card/Card';
+import DrawButton from '../DrawButton/DrawButton';
 
 class App extends Component {
   constructor(props) {
     super(props);
 
     this.updateCard = this.updateCard.bind(this);
+    this.toggleReveal = this.toggleReveal.bind(this);
 
     let cards = [];
     const pronouns = [
@@ -19,7 +20,7 @@ class App extends Component {
     ];
 
     for (let verb of data.conjugation) {
-      for (let i=0; i<pronouns.length; i++) {
+      for (let i = 0; i < pronouns.length; i++) {
         cards.push({
           'text': verb.list[i],
           'title': pronouns[i],
@@ -54,19 +55,26 @@ class App extends Component {
         {cards: currentCards, currentCard: this.getRandomCard(currentCards)})
   }
 
+  toggleReveal() {
+    console
+        .log(this)
+        // eslint-disable-next-line
+        this.state.currentCard.revealed = !this.state.currentCard.revealed;
+    this.setState(
+        {cards: this.state.cards, currentCard: this.state.currentCard})
+  }
+
   render() {
     return (
-      <div className='App'>
-        <div className='cardRow'>
-          <Card data={
-      this.state.currentCard} />
+        <div className='App'><div className='cardRow'>
+        <Card data={this.state.currentCard} toggleReveal={
+      this.toggleReveal} />
         </div>
         <div className='buttonRow'>
           <DrawButton drawCard={
       this.updateCard}/>
         </div>
-      </div>
-    );
+      </div>);
   }
 }
 

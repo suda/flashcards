@@ -11,6 +11,12 @@
   background: #34495e;
   margin: auto;
   margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.btn img {
+  height: 48px;
+  padding-top: 8px;
 }
 
 .btn:active{
