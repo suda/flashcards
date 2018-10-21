@@ -1,8 +1,8 @@
-## React-Flashcards 
+## Flashcards
 
-This application is in progress. Currently, the application is used for basic flashcard memorization of the Hanzi.  The latest version of this application is built using React.
+> Flashcard webapp using Sans Forgetica font for better learning
 
-![screenshot](https://github.com/wesdoyle/react-flashcards/blob/master/hanzil-demo-gif.gif)
+![screenshot](https://github.com/suda/flashcards/blob/master/hanzil-demo-gif.gif)
 
 
 ## getting started
@@ -43,3 +43,6 @@ Implement spaced-repetition algorithm with user feedback re: memoriziation confi
 ## misc
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
+
+
+Cards by Sathish Selladurai from the Noun Project
