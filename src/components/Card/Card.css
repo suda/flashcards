@@ -1,7 +1,5 @@
 .card-container {
-  cursor: pointer;
   height: 400px;
-  width: 400px;
   perspective: 800px;
   position: relative;
   margin: auto;
@@ -10,10 +8,7 @@
 
 .card {
   height: 380px;
-  width: 380px;
   position: absolute;
-  border: 10px solid #8c7ae6;
-  border-radius: 25px;
   transform-style: preserve-3d;
   transition: all 0.4s ease-in-out;
 }

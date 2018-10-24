@@ -1,0 +1,19 @@
+.menu a {
+    text-decoration: none;
+}
+
+.menu-item {
+    height: 100px;
+    background: white;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.menu-item .text {
+    font-family: SansForgetica, sans-serif;
+    color: #333;
+    font-size: 3.5em;
+}

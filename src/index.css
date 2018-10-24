@@ -17,6 +17,17 @@ body {
   height: 80vh;
 }
 
+.rect-container {
+  cursor: pointer;
+  width: 400px;
+}
+
+.rect {
+  width: 380px;
+  border: 10px solid #8c7ae6;
+  border-radius: 25px;
+}
+
 @media (max-width: 420px) {
   #root {
     height: 100%;

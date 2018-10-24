@@ -25,7 +25,7 @@ I'd love anyones help with this project and there are two areas that might need 
 This is a small React app which just shows flashcards on load. I'm hoping to extend it with:
 
 * [ ] Ability to mark a card as read and storing it in local storage
-* [ ] Menu that allows to select the data set (which language, category, level)
+* [x] Menu that allows to select the data set (which language, category, level)
 * [ ] Ability to store and restore progress between devices (I was thinking this could be done by sharing a QR code or link)
 * [ ] Better mobile support (currently it looks nice on iPhone X/Xs but hasn't been tested on anything else)
 * [ ] Different types of flashcards (i.e. images, entering text)

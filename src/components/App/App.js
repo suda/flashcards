@@ -1,93 +1,43 @@
 import './App.css';
 
-import React, {Component} from 'react';
+import React, {Component} from 'react'
+import _ from 'lodash'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 import data from '../../data/spanish'
-import Card from '../Card/Card';
-import DrawButton from '../DrawButton/DrawButton';
+import CardView from '../CardView/CardView'
+import MenuView from '../MenuView/MenuView'
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-
-    this.updateCard = this.updateCard.bind(this);
-    this.toggleReveal = this.toggleReveal.bind(this);
-
-    let cards = [];
-    const pronouns = [
-      'yo', 
-      'tú', 
-      'él\nella\nusted', 
-      'nosotros\nnosotras', 
-      'vosotros\nvosotras',
-      'ellos\nellas\nustedes'
-    ];
-
-    for (let verb of data.conjugation) {
-      for (let i = 0; i < pronouns.length; i++) {
-        cards.push({
-          'text': verb.list[i],
-          'title': pronouns[i],
-          'subtitle': verb.verb
-        });
-      }
-    }
-
-    this.state = { cards: cards, currentCard: {} }
+  matchOptions(data, match) {
+    const path = (match.params[0] || '').replace(/\//g, '.')
+    const options = path === '' ? data : _.get(data, path)
+    return _.keys(options).map(key => {return {
+      key: key,
+      isView: !!options[key].items,
+      path: path
+    }})
   }
 
-  componentWillMount() {
-    const currentCards = this.state.cards;
-
-    this.setState(
-        {cards: currentCards, currentCard: this.getRandomCard(currentCards)});
-  }
-
-  getRandomCard(currentCards) {
-    var randomIndex = Math.floor(Math.random() * currentCards.length);
-    var card = currentCards[randomIndex];
-    if (card === this.state.currentCard) {
-      this.getRandomCard(currentCards)
-    }
-
-    return (card);
-  }
-
-  updateCard() {
-    const currentCards = this.state.cards;
-    
-    if (this.state.revealed) {
-      this.toggleReveal()
-    }
-
-    setTimeout(this.setState.bind(this, {
-      cards: currentCards,
-      currentCard: this.getRandomCard(currentCards)
-    }), 200)
-  }
-
-  toggleReveal() {
-    let revealed = this.state.revealed
-    revealed = !revealed;
-    this.setState({
-      cards: this.state.cards,
-      currentCard: this.state.currentCard,
-      revealed
-    })
+  matchData(data, match) {
+    const path = (match.params[0] || '').replace(/\//g, '.')
+    return path === '' ? data : _.get(data, path)
   }
 
   render() {
     return (
-      <div className='App'>
-        <div className='cardRow'>
-          <Card data={this.state.currentCard} toggleReveal={this.toggleReveal} revealed={this.state.revealed} />
+      <Router>
+        <div className='App'>
+          <Route path='/([\w\/]*)' exact={true} render={({match}) => (
+            <MenuView options={this.matchOptions(data, match)}/>
+          )} />
+          <Route path='/([\w\/]*).html' render={({match}) => (
+            <CardView data={this.matchData(data, match)} />
+          )} />
         </div>
-        <div className='buttonRow'>
-          <DrawButton drawCard={this.updateCard} />
-        </div>
-      </div>
+      </Router>
     );
   }
 }
 
-export default App;
+export default App

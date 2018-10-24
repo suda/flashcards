@@ -14,8 +14,8 @@ class Card extends Component {
 
     render(props) {
         return (
-            <div className="card-container">
-                <div className={this.props.revealed ? "card revealed" : "card"} onClick={this.toggleReveal}>
+            <div className="rect-container card-container">
+                <div className={this.props.revealed ? "rect card revealed" : "rect card"} onClick={this.toggleReveal}>
                     <div className="front">
                         <div className="content">
                             <div className="title">{this.props.data.title}</div>
