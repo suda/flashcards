@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 
 import Card from '../Card/Card'
 import DrawButton from '../DrawButton/DrawButton'
+import Nav from '../Nav/Nav';
 
 class CardView extends Component {
     constructor(props) {
@@ -75,6 +76,7 @@ class CardView extends Component {
     render(props) {
         return (
             <div>
+                <Nav />
                 <div className='cardRow'>
                     <Card data={this.state.currentCard} toggleReveal={this.toggleReveal} revealed={this.state.revealed} />
                 </div>
