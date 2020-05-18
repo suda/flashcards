@@ -1,0 +1,58 @@
+export default {
+  "spanish": {
+    "conjugation": {
+      "indicativo": {
+        "presente": {
+          "regular": {
+            "items": [
+              {
+                "verb": "amor",
+                "list": [
+                  "amo",
+                  "amas",
+                  "ama",
+                  "amamos",
+                  "amáis",
+                  "aman"
+                ]
+              },
+              {
+                "verb": "beber",
+                "list": [
+                  "bebo",
+                  "bebes",
+                  "bebe",
+                  "bebemos",
+                  "bebéis",
+                  "beben"
+                ]
+              },
+              {
+                "verb": "subir",
+                "list": [
+                  "subo",
+                  "subes",
+                  "sube",
+                  "subimos",
+                  "subís",
+                  "suben"
+                ]
+              },
+              {
+                "verb": "vivir",
+                "list": [
+                  "vivo",
+                  "vives",
+                  "vive",
+                  "vivimos",
+                  "vivís",
+                  "viven"
+                ]
+              }
+            ]
+          }
+        }
+      }
+    }
+  }
+}

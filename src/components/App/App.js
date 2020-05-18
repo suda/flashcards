@@ -4,7 +4,7 @@ import React, {Component} from 'react'
 import _ from 'lodash'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
-import data from '../../data/spanish'
+import data from '../../data'
 import CardView from '../CardView/CardView'
 import MenuView from '../MenuView/MenuView'
 
