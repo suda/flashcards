@@ -30,6 +30,8 @@
     ]
   },
   "devDependencies": {
-    "glob": "^7.1.6"
+    "glob": "^7.1.6",
+    "js-yaml": "^3.13.1",
+    "yaml-include": "^1.2.1"
   }
 }

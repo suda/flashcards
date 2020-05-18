@@ -1,0 +1,7 @@
+items:
+  - verb: llevar
+    list: ['lleve', 'lleves', 'lleve', 'llevemos', 'llevéis', 'lleven']
+  - verb: leer
+    list: ['lea', 'leas', 'lea', 'leamos', 'leáis', 'lean']
+  - verb: escribir
+    list: ['escriba', 'escribas', 'escriba', 'escribamos', 'escribáis', 'escriban']

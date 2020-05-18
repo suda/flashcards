@@ -1,0 +1,9 @@
+items:
+  - verb: llamarse
+    list: ['me llamo', 'te llamas', 'se llama', 'nos llamamos', 'os llamáis',
+        'se llaman']
+  - verb: apellidarse
+    list: ['me apellido', 'te apellidas', 'se apellida', 'nos apellidamos',
+        'os apellidáis', 'se apellidan']
+  - verb: ir
+    list: ['me voy', 'te vas', 'se va', 'nos vamos', 'os vaís', 'se van']
