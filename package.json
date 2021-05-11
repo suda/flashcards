@@ -3,7 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "lodash": "^4.17.19",
+    "lodash": "^4.17.21",
     "netlify-cli": "^2.51.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
